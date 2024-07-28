@@ -15,7 +15,7 @@ class PatientService {
         return $this->patient->fetchPatients();
     }
 
-    public function getPatientById($id) {
+    public function getPatientById(int $id) {
         try {
             return $this->patient->findById($id);
         } catch (\Exception $e) {
@@ -25,5 +25,9 @@ class PatientService {
 
     public function storePatient(array $data) {
         return $this->patient->create($data);
+    }
+
+    public function updatePatient(int $id, array $data) {
+        return $this->patient->update($id, $data);
     }
 }

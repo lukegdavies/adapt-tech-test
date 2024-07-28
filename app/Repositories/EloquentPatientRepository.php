@@ -16,4 +16,10 @@ class EloquentPatientRepository implements PatientRepoInterface {
     public function create(array $data): Patient {
         return Patient::create($data);
     }
+
+    public function update(int $id, array $data): Patient {
+        $patient = $this->findById($id);
+        $patient->update($data);
+        return $patient;
+    }
 }

@@ -63,9 +63,15 @@ class PatientController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(StorePatientRequest $request, string $id)
     {
-        //
+        try {
+             $this->patient->updatePatient($id, $request->validated());
+             return redirect()->route('patients.index')->with('success', 'Patient Updated successfully.');
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+            return redirect()->route('patients.index')->with('error', 'Failed to update patient.');
+        }
     }
 
     /**
@@ -73,6 +79,6 @@ class PatientController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
     }
 }
