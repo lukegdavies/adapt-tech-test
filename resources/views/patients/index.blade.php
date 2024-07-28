@@ -2,6 +2,15 @@
      <!-- Layout component for the application -->
     <div class="px-6 sm:px-0 pt-6 pb-6">
         <div class="flex flex-col mx-auto sm:px-6 lg:px-8">
+
+            @if (session('error'))
+                <div class="alert alert-error py-2 bg-red-900 text-white mb-10">
+                    <div class="p-3">
+                        {{ session('error') }}
+                    </div>
+                </div>
+            @endif
+
             <!-- Header section of the Patients page -->
            <div class="flex-none sm:flex lg:flex  items-center">
                <div class="sm:flex-auto">
