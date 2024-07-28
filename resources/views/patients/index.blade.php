@@ -3,6 +3,14 @@
     <div class="px-6 sm:px-0 pt-6 pb-6">
         <div class="flex flex-col mx-auto sm:px-6 lg:px-8">
 
+            @if (session('success'))
+                <div class="alert alert-success py-2 bg-gray-900 text-white mb-10">
+                    <div class="p-3">
+                        {{ session('success') }}
+                    </div>
+                </div>
+            @endif
+
             @if (session('error'))
                 <div class="alert alert-error py-2 bg-red-900 text-white mb-10">
                     <div class="p-3">
