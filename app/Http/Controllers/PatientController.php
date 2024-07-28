@@ -32,9 +32,14 @@ class PatientController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StorePatientRequest $request)
     {
-        //
+        try {
+            $this->patient->storePatient($request->validated());
+            return redirect()->route('patients.index')->with('success', 'Patient created successfully.')
+        } catch (\Exception $e) {
+             return redirect()->route('patients.index')->with('error', 'Failed to create patient.');
+        }
     }
 
     /**
