@@ -95,7 +95,7 @@
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <a href="{{ route('patients.edit', $patient->id) }}" class="text-blue-600 block">Edit</a>
                                         <div  x-cloak x-data="{ open: false }">
-                                        <a @click="open = true" class="text-red-500 hover:text-red-700">Delete</a>
+                                        <a @click="open = true" class="text-red-500 hover:text-red-700 cursor-pointer">Delete</a>
                                             <div x-show="open" style="background-color: rgba(0,0,0,0.5);" class="fixed inset-0 flex items-center justify-center p-4">
                                                 <div class="bg-white p-4 rounded-lg">
                                                     <p>Are you sure you want to delete this patient?</p>
