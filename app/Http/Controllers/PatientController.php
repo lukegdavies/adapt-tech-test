@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\PatientService;
+use App\Http\Requests\StorePatientRequest;
 
 class PatientController extends Controller
 {
@@ -36,7 +37,7 @@ class PatientController extends Controller
     {
         try {
             $this->patient->storePatient($request->validated());
-            return redirect()->route('patients.index')->with('success', 'Patient created successfully.')
+            return redirect()->route('patients.index')->with('success', 'Patient created successfully.');
         } catch (\Exception $e) {
              return redirect()->route('patients.index')->with('error', 'Failed to create patient.');
         }
