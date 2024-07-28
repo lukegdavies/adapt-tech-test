@@ -22,4 +22,8 @@ class EloquentPatientRepository implements PatientRepoInterface {
         $patient->update($data);
         return $patient;
     }
+
+    public function delete(int $id): bool {
+        return $this->findById($id)->delete();
+    }
 }

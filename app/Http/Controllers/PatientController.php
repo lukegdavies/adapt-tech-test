@@ -79,6 +79,11 @@ class PatientController extends Controller
      */
     public function destroy(string $id)
     {
-        
+        try {
+            $this->patient->deletePatient($id);
+            return redirect()->route('patients.index')->with('success', 'Patient Deleted successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route('patients.index')->with('error', 'Failed to Delete patient.');
+        }
     }
 }

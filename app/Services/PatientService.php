@@ -30,4 +30,8 @@ class PatientService {
     public function updatePatient(int $id, array $data) {
         return $this->patient->update($id, $data);
     }
+
+    public function deletePatient($id) {
+        return $this->patient->delete($id);
+    }
 }
