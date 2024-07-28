@@ -7,7 +7,7 @@ use App\Repositories\PatientRepoInterface as PatientRepo;
 class PatientService {
     protected $patient;
 
-    public function ___construct(PatientRepo $repo) {
+    public function __construct(PatientRepo $repo) {
         $this->patient = $repo;
     }
 

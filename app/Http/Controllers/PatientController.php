@@ -3,15 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\PatientService;
 
 class PatientController extends Controller
 {
+    protected $patient;
+
+    public function __construct(PatientService $patient) {
+        $this->patient = $patient;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('patients.index');
+        return view('patients.index')->withPatients($this->patient->fetch());
     }
 
     /**
