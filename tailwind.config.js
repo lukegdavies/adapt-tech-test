@@ -11,8 +11,12 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                'adapt-bg': '#1a1423'
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'inter': ['Inter', 'sans-serif'],
+                'inter-tight': ['Inter Tight', 'sans-serif'],
             },
         },
     },
