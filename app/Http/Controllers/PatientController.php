@@ -51,6 +51,15 @@ class PatientController extends Controller
         //
     }
 
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        return view('patients.edit')->withPatient($this->patient->getPatientById($id));
+    }
+
     /**
      * Update the specified resource in storage.
      */
