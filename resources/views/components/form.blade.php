@@ -32,6 +32,16 @@
                 <span class="text-xl font-semibold block">Patient Profile</span>
                 <span class="text-gray-600">This information is sensitive</span>
             </div>
+
+            <div class="w-full lg:w-3/5 p-8">
+                 <div class="rounded bg-white shadow p-6">
+                    <x-form-input name="nhs_number" label="NHS Number" placeholder="NHS number" :value="$patient->nhs_number ?? ''"/>
+
+                    <x-form-input name="date_of_birth" label="Date of birth" placeholder="" type="date" :value="$patient->date_of_birth ?? ''"/>
+
+                    <x-gender-radio-input name="sex" :selected="$patient->sex ?? ''"/>
+                 </div>
+            </div>
         </div>
     </div>
 </form>
