@@ -12,4 +12,8 @@ class EloquentPatientRepository implements PatientRepoInterface {
     public function findById(int $id): ?Patient {
         return Patient::findOrFail($id);
     }
+
+    public function create(array $data): Patient {
+        return Patient::create($data);
+    }
 }

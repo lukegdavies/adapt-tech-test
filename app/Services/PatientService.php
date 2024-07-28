@@ -22,4 +22,8 @@ class PatientService {
             throw new \App\Exceptions\NotFoundException("Patient not found", 404);
         }
     }
+
+    public function storePatient(array $data) {
+        return $this->patient->create($data);
+    }
 }
