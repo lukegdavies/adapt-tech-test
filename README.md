@@ -2,7 +2,7 @@
 Total Time: 2 hours 50 mins
 
 ## Description
-The Adapt Tech Test is a small web application developed for a hypothetical healthcare client. This application allows users to register, log in, and manage patient information. Built with Laravel and TailwindCSS, it focuses on providing a visually appealing and user-friendly interface for patient management.
+The Adapt Tech Test is a small web application developed for a hypothetical healthcare clients. This application allows users to register, log in, and manage patient information. Built with Laravel and TailwindCSS, it focuses on providing a visually appealing and user-friendly interface for patient management.
 
 ## Installation Instructions
 Follow these steps to set up the project on your local machine:
@@ -79,4 +79,4 @@ The registration and login follow the standard Laravel protocol, and you can ent
 ## Credits
 - [Laravel Documentation](https://laravel.com/docs/11.x/)
 
-This README provides a comprehensive overview of the project and instructions to get it up and running. If you have any questions or need further assistance, please refer to the Laravel documentation or reach out to the repository maintainer.
+This README provides a comprehensive overview of the project and instructions to get it up and running. If you have any questions or need further assistance, please reach out to me luke.g.d.davies@outlook.com
