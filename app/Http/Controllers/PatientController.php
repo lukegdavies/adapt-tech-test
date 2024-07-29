@@ -48,7 +48,7 @@ class PatientController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('patients.view')->withPatient($this->patient->getPatientById($id));
     }
 
 
