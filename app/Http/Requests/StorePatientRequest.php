@@ -29,7 +29,7 @@ class StorePatientRequest extends FormRequest
             'email' => ['required', 'email', 'unique:patients,email,' . $patientId],
             'phone_number' => 'nullable|digits_between:11,15',
             'address' => 'required|string|max:300',
-            'nhs_number' => ['required', 'string', 'max:255', 'unique:patients,nhs_number,' . $patientId],
+            'nhs_number' => ['required', 'string', 'digits:10', 'unique:patients,nhs_number,' . $patientId],
             'date_of_birth' => 'required|date',
             'sex' => 'required|in:M,F,O,P',
         ];
