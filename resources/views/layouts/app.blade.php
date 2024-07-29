@@ -23,7 +23,9 @@
         <div class="inner-nav-bg pb-4 pl-6 pr-6 overflow-x-auto gap-x-5 flex-col grow flex">
             <div class="h-16 flex mt-6">
                 <!-- Site logo component -->
-                <x-adapt-logo class="block h-8 fill-gray-900 dark:fill-white w-auto" />
+                <a href="{{ route('home') }}">
+                    <x-adapt-logo class="block h-8 fill-gray-900 dark:fill-white w-auto" />
+                </a>
             </div>
 
             <!-- Include the main menu layout -->

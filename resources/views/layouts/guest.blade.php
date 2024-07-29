@@ -21,7 +21,9 @@
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl mx-auto">
                     <header class="flex items-center justify-between py-10 w-full">
                         <div class="flex-shrink-0">
-                            <x-adapt-logo class="block h-8 fill-white w-auto" />
+                            <a href="{{ route('home') }}">
+                                <x-adapt-logo class="block h-8 fill-white w-auto" />
+                            </a>
                         </div>
 
                         {{-- Navigation on the right for login/register items --}}
