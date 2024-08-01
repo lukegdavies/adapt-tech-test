@@ -9,7 +9,7 @@ Follow these steps to set up the project on your local machine:
 
 1. **Clone the Repository**
     ```bash
-    git clone git@github.com:lukegdavies/adapt-tech-test.git
+    git clone https://github.com/lukegdavies/adapt-tech-test.git
     cd adapt-tech-test
     ```
 
